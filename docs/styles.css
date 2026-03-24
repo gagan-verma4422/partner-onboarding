@@ -14,9 +14,9 @@
   --sand: #f7fbfc;
   --rose: #eef9f7;
   --ring: rgba(34, 196, 216, 0.18);
-  --shadow-xl: 0 26px 60px rgba(16, 38, 61, 0.08);
-  --shadow-lg: 0 16px 34px rgba(16, 38, 61, 0.08);
-  --shadow-sm: 0 8px 20px rgba(16, 38, 61, 0.06);
+  --shadow-xl: none;
+  --shadow-lg: none;
+  --shadow-sm: none;
   --radius-xl: 32px;
   --radius-lg: 24px;
   --radius-md: 18px;
@@ -44,7 +44,7 @@ body {
 
 body::before,
 body::after {
-  content: "";
+  content: none;
   position: fixed;
   inset: auto;
   border-radius: 999px;
@@ -163,7 +163,6 @@ button {
   height: 10px;
   border-radius: 999px;
   background: linear-gradient(135deg, #ff8a00, #ffb14a);
-  box-shadow: 0 0 14px rgba(255, 138, 0, 0.24);
 }
 
 .sidebar h1 {
