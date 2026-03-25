@@ -2,15 +2,15 @@ server {
     server_name veem.com www.veem.com;
     root /var/www/veem;
 
-    location = /partner-onboarding {
-        return 301 /partner-onboarding/;
+    location = /partner-intake-form {
+        return 301 /partner-intake-form/;
     }
 
-    location ^~ /partner-onboarding/ {
-        try_files $uri $uri/ /partner-onboarding/index.html;
+    location ^~ /partner-intake-form/ {
+        try_files $uri $uri/ /partner-intake-form/index.html;
     }
 
-    location = /api/partner-onboarding/submissions {
+    location = /api/partner-intake-form/submissions {
         proxy_pass http://127.0.0.1:9009;
         proxy_http_version 1.1;
         proxy_set_header Host $host;

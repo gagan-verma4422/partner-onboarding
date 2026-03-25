@@ -1,6 +1,6 @@
 /*
   Example production endpoint for:
-  POST /api/partner-onboarding/submissions
+  POST /api/partner-intake-form/submissions
 
   Requires:
   - npm install express nodemailer
@@ -13,7 +13,7 @@
   - SMTP_USER=...
   - SMTP_PASS=...
   - FROM_EMAIL=no-reply@veem.com
-  - PARTNER_ONBOARDING_RECIPIENTS=partner-onboarding@veem.com,ops@veem.com
+  - PARTNER_ONBOARDING_RECIPIENTS=partner-intake-form@veem.com,ops@veem.com
 */
 
 const express = require("express");
@@ -42,7 +42,7 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-app.post("/api/partner-onboarding/submissions", async (request, response) => {
+app.post("/api/partner-intake-form/submissions", async (request, response) => {
   try {
     const payload = request.body || {};
     if (!payload.responses) {
@@ -55,7 +55,7 @@ app.post("/api/partner-onboarding/submissions", async (request, response) => {
     const contact = payload.responses.contact || {};
     const company = payload.responses.company || {};
     const subjectParts = [
-      "Partner onboarding submission",
+      "Partner intake form submission",
       company.companyName || "Unknown company",
       [contact.firstName, contact.lastName].filter(Boolean).join(" ") || "Unknown contact",
     ];
@@ -88,5 +88,5 @@ app.post("/api/partner-onboarding/submissions", async (request, response) => {
 });
 
 app.listen(port, "127.0.0.1", () => {
-  console.log(`Partner onboarding email API listening on http://127.0.0.1:${port}`);
+  console.log(`Partner intake form email API listening on http://127.0.0.1:${port}`);
 });

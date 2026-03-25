@@ -29,7 +29,7 @@ This is an actively iterated prototype / deployable static form, not a finished 
 
 ## Project structure
 
-- `site/partner-onboarding/`
+- `site/partner-intake-form/`
   Main static app version.
 - `docs/`
   GitHub Pages / docs-hosted version of the same app.
@@ -40,7 +40,7 @@ This is an actively iterated prototype / deployable static form, not a finished 
 
 Important:
 
-- `site/partner-onboarding/` and `docs/` must stay in sync.
+- `site/partner-intake-form/` and `docs/` must stay in sync.
 - Most product and UI changes were applied to both copies.
 
 ## Tech approach
@@ -136,7 +136,7 @@ The project is still being refined in these areas:
 
 - final visual polish and consistency between local and GitHub-hosted rendering
 - continued tuning of shadows, selected states, and card styling
-- maintaining parity between `site/partner-onboarding` and `docs`
+- maintaining parity between `site/partner-intake-form` and `docs`
 - continued copy review with stakeholders
 - validating whether the current questions and order are final
 
@@ -149,9 +149,9 @@ The project is still being refined in these areas:
 ## How to continue work safely
 
 - Always update both:
-  - `site/partner-onboarding/app.js`
+  - `site/partner-intake-form/app.js`
   - `docs/app.js`
-  - `site/partner-onboarding/styles.css`
+  - `site/partner-intake-form/styles.css`
   - `docs/styles.css`
 - If content changes, also review:
   - `docs/team-feedback-questionnaire-outline.md`
