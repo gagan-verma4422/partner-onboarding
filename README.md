@@ -2,7 +2,7 @@
 
 This package is prepared for deployment at:
 
-- `https://veem.com/partner-onboarding/`
+- `https://veem.com/partner-intake-form/`
 
 ## Package layout
 
